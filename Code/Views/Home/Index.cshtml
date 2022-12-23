@@ -2,7 +2,35 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron">
+    <div class="container centred-text">
+        <h1 class="display-3">Lego Image Creator</h1>
+        <p>A tool for creating a pixelated version of an Image so it can be recreated using Lego pieces.</p>
+    </div>
 </div>
+
+<div class="container flex-display">
+    <div class="col-md-5 image-card">
+        <h2>Source Image</h2>
+        <canvas class="image-frame" id="source-image">
+        </canvas>
+        <div>
+            <span class="btn btn-secondary btn-file" id='source-span'>
+                Choose Source Image<input type='file' id='source-input'/>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-5 image-card">
+        <h2>Pixelated Image</h2>
+        <canvas class="image-frame" id="pallette-image">
+        </canvas>
+    </div>
+</div>
+
+<div class="container centred-text">
+    <button class="btn btn-success begin-button" id="pixelate-button">Pixelate!</button>
+</div>
+
+@section scripts {
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}

@@ -1,5 +1,11 @@
+body {
+  margin-bottom: 60px;
+}
+
 html {
   font-size: 14px;
+  min-height: 100%;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -8,11 +14,46 @@ html {
   }
 }
 
-html {
+.btn-file {
   position: relative;
-  min-height: 100%;
+  overflow: hidden;
 }
 
-body {
-  margin-bottom: 60px;
+.btn-file input[type=file] {
+  background: white;
+  cursor: inherit;
+  display: block;
+  filter: alpha(opacity=0);
+  font-size: 100px;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.centred-text {
+  text-align: center;
+}
+
+.flex-display {
+  display: flex;
+}
+
+.image-card {
+  border-style: solid;
+  border-color: lightgray;
+  margin: 50px;
+  padding: 25px;
+  text-align: center;
+}
+
+.image-frame {
+  background-color: #d3d3d32b;
+  height: 250px;
+  margin-bottom: 20px;
+  width: 95%;
 }
